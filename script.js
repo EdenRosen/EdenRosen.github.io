@@ -16,31 +16,37 @@ PROJECTS = [
   ['CircleTester', 'Circle Tester'],
   ['Darts', 'Darts'],
   ['EdenLanguage', 'Eden Language'],
-  ['FlappyBirdAi', 'Flappy Bird AI'],
+  ['FlappyBirdAI', 'Flappy Bird AI'],
   ['Fnae', 'FNAE'],
   ['FourierSeries', 'Fourier Series'],
   ['GameEdiv', 'Sticky Red'],
   ['GameOfLife', 'Game Of Life'],
   ['Minecraft', 'Minecraft'],
   ['Minesweeper', 'Minesweeper'],
-  ['MoneyPortal', 'Money Portal'],
-  ['Pacman', 'Pacman'],
+  ['MoneyPortal', 'Money Portal', true],
+  ['Pacman', 'Pacman', true],
   ['SnakeAI', 'Snake AI'],
   ['SortSimulation', 'Sort Simulation'],
   ['TenTen', '1010!'],
   ['TowerDefense', 'Tower Defense'],
   ['VirusEvolution', 'Virus Evolution'],
-  ['BalloonsPop', 'Balloons Pop'],
+  ['BalloonsPop', 'Balloons Pop', true],
   ['BeatMaker', 'Beat Maker'],
 ]
 
 
 
-const getProjectHTML = p => `
-<a href="/projects/${p[0]}" class="details-container color-container">
-  <h2 class="experience-sub-title project-title">${p[1]}</h2>
-</a>
-`
+const getProjectHTML = p => {
+  var link = `/projects/${p[0]}`
+  if (p.length > 2 && p[2]) {
+    link = `/${p[0]}`
+  }
+  return `
+  <a href="${link}" class="details-container color-container">
+    <h2 class="experience-sub-title project-title">${p[1]}</h2>
+  </a>
+  `
+}
 
 for (const project of PROJECTS) {
   $('#otherProjects').append(getProjectHTML(project))
