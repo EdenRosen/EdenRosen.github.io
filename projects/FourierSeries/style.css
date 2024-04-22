@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: 'Nunito';
+    text-align: center;
+}
+canvas {
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+input {
+    width: 700px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    outline: none;
+    background: rgb(238, 238, 238);
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+#runBtn {
+    border: none;
+    font-size: 18px;
+    font-family: 'Nunito';
+    margin-top: 15px;
+    padding: 3px 100px;
+    background: rgb(181, 196, 219);
+    border-radius: 5px;
+}
+#runBtn:hover {
+    background: rgb(168, 182, 204);
+}

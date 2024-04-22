@@ -1,0 +1,80 @@
+:root {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+* {
+    font-family: 'Orbitron', 'Hind Madurai', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+header {
+    background: rgb(228, 131, 131);
+    padding: 10px 0;
+    display: none;
+}
+h1 {
+    font-size: 50px;
+    color: rgb(224, 46, 46);
+    margin: 0;
+    letter-spacing: 6px;
+}
+body {
+    text-align: center;
+    margin: 0;
+}
+canvas {
+    background: rgb(219, 219, 219);
+    margin-top: 20px;
+    width: 1000px;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.table > div {
+    display: flex;
+}
+.table > div > div {
+    background: gray;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 5px;
+}
+button {
+    padding: 10px 50px;
+    font-size: 30px;
+    margin-top: 20px;
+    background: rgb(88, 138, 212);
+    border-radius: 10px;
+    border: none;
+}
+button:hover {
+    background: rgb(123, 160, 214);
+}
+button:active {
+    background: rgb(187, 207, 236);
+}
+.stopBtn {
+    background: rgb(230, 66, 66);
+}
+.stopBtn:hover {
+    background: rgb(241, 121, 121);
+}
+.stopBtn:active {
+    background: rgb(255, 173, 173);
+}
+footer {
+    text-align: left;
+    padding: 0 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+footer * {
+    font-family: sans-serif;
+}

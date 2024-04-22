@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Virus Evolution</title>
+</head>
+<body>
+    <header>
+        <h1>Virus Evolution</h1>
+    </header>
+    <button class='btn1' id="btn1" onclick="click1()">Play!</button>
+    <button class='btn2' id="btn2" onclick="reset()">Reset</button>
+    <div class="container">
+        <canvas id="main-canvas"></canvas>
+        <canvas id="graph-canvas"></canvas>
+        <div class="check-space">
+            <div>
+                <label>Auto play </label>
+                <input type="checkbox" id="autoplay">
+            </div>
+            <div>
+                <label>Asap </label>
+                <input type="checkbox" id="asap">
+            </div>
+        </div>
+        
+        <h3>Virus:</h3>
+        <div id="details"class="details"></div>
+    </div>
+    
+    
+    <footer>
+        <p style="font-size: 15px;">&copy; Mar 2021 Eden Rosen</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

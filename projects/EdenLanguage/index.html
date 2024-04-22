@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Code Editor</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href='' class="webLink">Eden Code Editor</a>
+            <button id='runBtn'>
+                <i class="fas fa-play"></i>
+                <span>Run</span>
+            </button>
+            <button id='stopBtn'>
+                <i class="fas fa-stop"></i>
+                <span>Stop</span>
+            </button>
+        </div>
+        <a href=''>Menu</a>
+    </header>
+    <main>
+        <div id="code" class="code">
+            <div id="numbers" class="numbers">
+                <span>1</span>
+            </div>
+            <div id="codeText" class="codeText" contenteditable="true" spellcheck="false">
+                <span class="codeLine">log('Hello World')</span>
+            </div>
+        </div>
+        <div class="not-code">
+            <div id="console" class="console"></div>
+            <canvas class="canvas"></canvas>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+:root {
+    font-family: 'Nunito', sans-serif;
+}
+* {
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    text-align: center;
+    background: rgb(183, 214, 240);
+}
+h1 {
+    letter-spacing: 1px;
+}
+canvas {
+    margin-top: 20px;
+    background: black;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-row {
+    margin-top: 10px;
+    width: 800px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.btn-row .label-input {
+    display: flex;
+    align-items: center;
+}
+.btn-row .label-input input {
+    width: 80px;
+    margin-right: 10px;
+}
+#range {
+    border-radius: 5px;
+    border-width: 1px;
+}
+.btn-row button {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(57, 138, 57);
+    color: white;
+}
+.btn-row > button:hover {
+    background: rgb(63, 153, 63);
+}
+.btn-row > button:active {
+    background: rgb(48, 117, 48);
+}
+#shuffle {
+    background: rgb(182, 80, 80);
+}
+#shuffle:hover {
+    background: rgb(206, 91, 91);
+}
+#shuffle:active {
+    background: rgb(155, 69, 69);
+}
+footer {
+    text-align: left;
+    padding: 0 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+footer * {
+    font-family: sans-serif;
+}

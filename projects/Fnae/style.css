@@ -1,0 +1,67 @@
+* {
+    outline: none;
+}
+:root {
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    --size: 30px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: black;
+    height: 100vh;
+}
+main {
+    background: rgb(65, 100, 129);
+}
+main * {
+    font-size: var(--size);
+}
+canvas {
+    width: 100%;
+    height: 100%;
+    background: red;
+    display: none;
+}
+#home {
+    padding: 0 3em;
+}
+h1 {
+    font-size: 1.5em !important;
+    text-align: center;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+}
+.btns > * {
+    cursor: pointer;
+    width: fit-content;
+    margin: 0.5em 0;
+}
+.btns > *:hover {
+    color: rgb(145, 32, 32);
+}
+.camera {
+    background: rgb(50, 74, 126);
+    border: 0.06em solid white;
+    border-radius: 0.06em;
+    color: white;
+    width: 2.2em;
+    height: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    position: absolute;
+}
+.camera span {
+    font-size: 0.5em;
+}
+#c1 {
+    background: rgb(71, 155, 92);
+}

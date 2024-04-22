@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"  type="image/png" sizes="16×16" href="img/rubikicon.png">
+    <title></title>
+    </title>
+</head>
+<body>
+    <h1 class='header'>Encoding</h1>
+    <input type="text" id="textInput" class="textInput" placeholder="Enter a code"/>
+    <button class='encode' id='encode' onclick="click1()">Decipher</button>
+    <br>
+    <div id="textOutput" class="textOutput"></div>
+    <br>
+    <select id='type' name='type' onchange="changeType()">
+        <option value='Decipher'>Decipher</option>
+        <option value='Encode'>Encode</option>
+    </select>
+    <select id='codeType' name='codeType' onchange="changeEType()">
+        <option value='transient'>Transient</option>
+        <option value='pattern'>Pattern</option>
+    </select>
+    <input id='numberP' class='numberP' type="number"/>
+    <script src="script.js"></script>
+    <footer>
+        <p style="font-size: 15px;">&copy; 22/11/2020 Eden Rosen</p>
+    </footer>
+</body>
+</html>

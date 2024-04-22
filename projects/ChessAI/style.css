@@ -1,0 +1,10 @@
+:root {
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    text-align: center;
+}
+canvas {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap">
+    <link rel='stylesheet' href='style.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Sort Simulation</title>
+</head>
+<body>
+    <h1 class="unselectable">Sort Simulation</h1>
+    <canvas></canvas>
+    <div class="btn-row">
+        <button id="shuffle">Shuffle</button>
+        <button id="b">Bubble</button>
+        <button id="s">Selection</button>
+        <button id="i">Insertion</button>
+        <button id="m">Merge</button>
+        <button id="q">Quick</button>
+        <div class="label-input">
+            <input id="range" type="number" min="3" max="10000" value="100">
+            <label>Range</label>
+        </div>
+        <div class="label-input">
+            <input id="speed" type="range" min="0" max="10" value="5" step="1">
+            <label>Speed</label>
+        </div>
+    </div>
+    <footer>
+        <p style="font-size: 15px;">&copy; 2021 Eden Rosen</p>
+    </footer>
+</body>
+</html>

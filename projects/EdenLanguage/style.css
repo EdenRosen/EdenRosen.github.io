@@ -1,0 +1,116 @@
+* {
+    box-sizing: none;
+    outline: none;
+}
+body {
+    margin: 0;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+header {
+    background: rgb(59, 59, 59);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 45px;
+}
+.webLink {
+    font-size: 14px;
+}
+header button {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+    font-size: inherit;
+}
+header button span {
+    margin-left: 5px;
+}
+header button:hover{
+    color: rgb(228, 228, 228);
+}
+#runBtn {
+    margin-left: 50px;
+}
+#stopBtn {
+    margin-left: 20px;
+    color: rgb(255, 165, 165);
+    display: none;
+}
+#stopBtn.active {
+    margin-left: 50px;
+}
+main {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 45px);
+}
+main .not-code {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+main .console {
+    background: rgb(26, 26, 26);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    padding: 10px 0;
+    font-family: 'Source Code Pro';
+    width: 50vw;
+    color: rgb(163, 226, 255);
+}
+main .canvas {
+    background: rgb(255, 255, 255);
+    flex-grow: 1;
+}
+main .code {
+    background: rgb(31, 31, 31);
+    width: 50vw;
+    overflow: scroll;
+    font-family: 'Source Code Pro';
+    display: flex;
+    padding: 10px 0;
+}
+main .codeText {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+main .numbers {
+    display: flex;
+    flex-direction: column;
+    padding-right: 23px;
+    min-width: 35px;
+    text-align: end;
+    color: rgb(124, 124, 124);
+}
+.codeLine {
+    white-space: nowrap;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+main .console > span {
+    white-space: nowrap;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+main .numbers > span {
+    line-height: 1.5;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::selection {
+    background: rgb(42, 92, 133);
+}

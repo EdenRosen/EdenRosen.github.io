@@ -1,0 +1,37 @@
+:root {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+* {
+    font-family: 'Orbitron', 'Hind Madurai', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+header {
+    background: rgb(228, 131, 131);
+    padding: 10px 0;
+    display: none;
+}
+h1 {
+    font-size: 50px;
+    color: rgb(224, 46, 46);
+    margin: 0;
+    letter-spacing: 6px;
+}
+body {
+    text-align: center;
+    margin: 0;
+}
+canvas {
+    background: rgb(219, 219, 219);
+    margin-top: 20px;
+    width: 1000px;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

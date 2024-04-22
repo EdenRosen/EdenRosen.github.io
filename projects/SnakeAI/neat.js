@@ -1,0 +1,120 @@
+
+
+
+class NN {
+    constructor (nodes,cons,range) {
+        this.nodes = nodes
+        this.cons = cons
+        this.set(cons,range)
+    }
+
+    set (c,range = 0.3) {
+        var a = JSON.parse(JSON.stringify(c))
+        for (let i in a) {
+            Object.entries(a[i]).forEach(
+                ([key, value]) => {
+                    var ran = Math.random()*2-1
+                    let val = value + ran*range
+                    if (val > 1) {
+                        val = 1
+                    } else if (val < -1) {
+                        val = -1
+                    }
+                    a[i][key] = val
+                }
+            )
+        }
+        this.cons = a
+    }
+
+    run (inputs) {
+        this.nodes[0] = inputs
+        for (let n = 1; n < this.nodes.length; n++) {
+            for (let i in this.nodes[n]) {
+                var sum = 0
+                for (let m in this.nodes[n-1]) {
+                    sum += this.cons[n-1][m+i] * this.nodes[n-1][m]
+                }
+                this.nodes[n][i] = this.s(sum)
+            }
+        }
+        return this.nodes[this.nodes.length-1]
+    }
+    
+    
+    fix = (i) => Math.floor(i*100)/100
+    s = (i) => this.fix(1/(1+Math.pow(Math.E, -i)))
+}
+
+class Neat {
+    constructor (layers,canvas) {
+        this.canvas = canvas
+        this.layers = layers
+        this.nodes
+        this.cons
+        this.reset()
+    }
+
+    reset () {
+        let layers = this.layers
+        let nodes = []
+        let cons = []
+    
+        for (let n in layers) {
+            let arr = []
+            for (let i = 0; i < layers[n]; i++) {
+                arr.push(0)
+            }
+            nodes.push(arr)
+        }
+    
+        for (let n = 1; n < nodes.length; n++) {
+            let obj = {}
+            for (let i in nodes[n]) {
+                for (let m in nodes[n-1]) {
+                    obj[m+i] = 0
+                }
+            }
+            cons.push(obj)
+        }
+        this.nodes = nodes
+        this.cons = cons
+    }
+
+    print () {
+        for (let n = 1; n < this.layers.length; n++) {
+            for (let i in this.nodes[n]) {
+                for (let m in this.nodes[n-1]) {
+                    const nec = this.cons[n-1][m+i]
+                    let color = 'red'
+                    if (nec < 0) {
+                        color = 'blue'
+                    }
+                    var w = Math.abs(nec)
+                    if (w == 0) {
+                        w = 0.05
+                    }
+                    this.canvas.line([{x:n*70+100,y:i*30+50},{x:n*70+30,y:m*30+50}],color,w*2)
+                }
+            }
+        }
+        for (let n in this.layers) {
+            for (let i = 0; i < this.layers[n]; i++) {
+                let c = 255-this.nodes[n][i]*255
+                this.canvas.shape('e',n*70+100,i*30+50,10,10,`rgb(${c},${c},${c})`)
+            }
+        }
+        // var points = []
+        // const max = Math.max(...progress)
+        // for (let n in progress) {
+        //     points.push([n*140/(progress.length-1)+270,150-progress[n]/max*100])
+        // }
+        // line(points,'black')
+        // ctx.font = '30px Ariel'
+        // ctx.fillText(`Gen: ${gen}`,cw-150,50)
+        // ctx.fillText(`Birds: ${birds}`,cw-150,100)
+    }
+
+    create = () => new NN(this.nodes,this.cons,1)
+    mutate = (nn,range) => nn.set(this.cons,range)
+}

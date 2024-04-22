@@ -1,0 +1,164 @@
+body {
+    background-color: rgb(159, 206, 228);
+    color:rgb(24, 45, 99);
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+}
+.header {
+    text-align: center;
+    margin: -8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(63, 152, 194);
+    color: rgb(18, 71, 150);
+    font-size: 80px;
+}
+footer {
+    text-align: left;
+    padding: 10px 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+button {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(66, 177, 177);
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+button:hover {
+    background-color: rgb(40, 158, 212);
+    box-shadow:  rgb(79, 176, 221) 2px 2px 20px;
+    transition: 0.5s;
+}
+button:focus {
+    outline: 0;
+}
+button:active {
+    background-color: rgb(113, 219, 219);
+    transition: none;
+}
+.reset {
+    position: absolute;
+    margin: 10px;
+    height: 75px;
+    padding: 0px 15px;
+    font-size: 40px;
+    width: 160px;
+    right: 10px;
+}
+.mix {
+    position: absolute;
+    margin: 10px;
+    margin-top: 110px;
+    height: 75px;
+    padding: 0px 15px;
+    font-size: 40px;
+    width: 160px;
+    right: 10px;
+}
+.arrows {
+    position: absolute;
+    margin: 10px;
+    margin-top: 220px;
+    height: 75px;
+    padding: 0px 15px;
+    font-size: 40px;
+    width: 160px;
+    right: 10px;
+}
+.cube {
+    position: absolute;
+    margin: 300px 0;
+    left: 50%;
+    transform: translate(-245px, 0px);
+}
+.w {
+    transform: rotate(-30deg);
+}
+.b {
+    transform: rotate(-90deg);
+}
+.bb {
+    transform: translate(269px, 465px);
+}
+.r {
+    transform: rotate(30deg);
+}
+.rr {
+    transform: translate(1px, -4px);
+}
+.w1,.w2,.w3,.w4,.w5,.w6,.w7,.w8,.w9,.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9,.r1,.r2,.r3,.r4,.r5,.r6,.r7,.r8,.r9{
+    position: absolute;
+    left: 30px;
+    border: 2px solid black;
+    width: 100px;
+    height: 87px;
+    transform: skewX(30deg);
+}
+.w2,.b2,.r2 {
+    top: 89px;
+    left: 81px;
+}
+.w3,.b3,.r3 {
+    top: 178px;
+    left: 132px;
+}
+.w4,.b4,.r4 {
+    left: 132px;
+}
+.w5,.b5,.r5 {
+    top: 89px;
+    left: 183px;
+}
+.w6,.b6,.r6 {
+    top: 178px;
+    left: 234px;
+}
+.w7,.b7,.r7 {
+    left: 234px;
+}
+.w8,.b8,.r8 {
+    top: 89px;
+    left: 285px;
+}
+.w9,.b9,.r9 {
+    top: 178px;
+    left: 336px;
+}
+.arrow {
+    position: absolute;
+    width: 130px;
+    clip: rect(20px,105px,105px,20px)
+}
+.a1,.a7,.a13 {
+    transform: translate(430px, 340px);
+}
+.a2,.a8,.a14 {
+    transform: translate(340px, 390px);
+}
+.a3,.a9,.a15 {
+    transform: translate(250px, 440px);
+}
+.a4,.a10,.a16 {
+    transform: translate(160px, 440px);
+}
+.a5,.a11,.a17 {
+    transform: translate(70px, 390px);
+}
+.a6,.a12,.a18 {
+    transform: translate(-20px, 340px);
+}
+.aL {
+    transform: rotate(120deg);
+}
+.aL1 {
+    transform: translate(535px, -6px);
+}
+.aR {
+    transform: rotate(240deg);
+}
+.aR1 {
+    transform: translate(280px, 460px);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script defer src="SoundBlock.js"></script>
+    <script defer src="script.js"></script>
+
+    <title>BeatMaker</title>
+</head>
+<body class="unselectable">
+    <header>
+        <h1>Beat Maker</h1>
+    </header>
+    <div id="panel"></div>
+    <div id="controls">
+        <button id="clearAllBtn">Clear</button>
+        <button id="playAllBtn">Play</button>
+        <button id="stopAllBtn">Stop</button>
+    </div>
+    <div id="soundControl">
+        <h2 class="title"></h2>
+        <button id="deleteBtn">Delete</button>
+        <button id="loopBtn">Loop</button>
+        <div id="audios"></div>
+    </div>
+    <div id="guide">
+        <h3>Guide</h3>
+        <p>
+            Left click - play sound<br>
+            Right click - record sound<br>
+            Double click - opens sound control panel<br>
+            Middle click - stop sound<br>
+        </p>
+    </div>
+    
+
+    <footer>
+        <p style="font-size: 15px;">&copy; 21/4/2024 Eden Rosen</p>
+    </footer>
+</body>
+</html>
