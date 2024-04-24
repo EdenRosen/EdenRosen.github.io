@@ -28,6 +28,7 @@ h1 {
     /* border-radius: 20px; */
     border: solid 1px rgb(182, 224, 182);
     background-color: rgb(220, 248, 220);
+    width: 400px;
     
 }
 #graph-canvas {

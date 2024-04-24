@@ -7,4 +7,5 @@ body {
 canvas {
     margin-top: 20px;
     margin-bottom: 100px;
+    width: 400px;
 }

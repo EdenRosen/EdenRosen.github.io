@@ -8,6 +8,7 @@ body {
 canvas {
     margin-top: 130px;
     background-color: rgb(119, 154, 219);
+    width: 500px;
 }
 .header {
     text-align: center;

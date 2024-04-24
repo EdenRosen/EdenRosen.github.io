@@ -4,6 +4,9 @@ const c = canvas.getContext('2d')
 canvas.width = 800;
 canvas.height = 800;
 
+CANVAS_WIDTH = 400
+RATIO = CANVAS_WIDTH/canvas.width
+
 var map
 var hard
 const hardButton = document.getElementById('hard')
@@ -132,29 +135,23 @@ function king(x, y, white) {
 let piece = { name: '', x: 0, y: 0 }
 
 canvas.addEventListener('mousedown', e => {
-    let x
-    if (window.innerWidth > canvas.width) {
-        x = e.clientX - (window.innerWidth - canvas.width) / 2 - 50
-    } else {
-        x = e.clientX - 50
+    const mouse = {
+        x: Math.floor((e.pageX - canvas.offsetLeft)/RATIO),
+        y: Math.floor((e.pageY - canvas.offsetTop)/RATIO),
     }
-    let y = e.clientY - 153
-    x = Math.round(x / 100)
-    y = Math.round(y / 100)
+    const x = Math.floor(mouse.x/canvas.width*8)
+    const y = Math.floor(mouse.y/canvas.height*8)
     piece.name = map[y][x]
     piece.x = x
     piece.y = y
 })
 canvas.addEventListener('mouseup', e => {
-    let x
-    if (window.innerWidth > canvas.width) {
-        x = e.clientX - (window.innerWidth - canvas.width) / 2 - 50
-    } else {
-        x = e.clientX - 50
+    const mouse = {
+        x: Math.floor((e.pageX - canvas.offsetLeft)/RATIO),
+        y: Math.floor((e.pageY - canvas.offsetTop)/RATIO),
     }
-    let y = e.clientY - 153
-    x = Math.round(x / 100)
-    y = Math.round(y / 100)
+    const x = Math.floor(mouse.x/canvas.width*8)
+    const y = Math.floor(mouse.y/canvas.height*8)
     let places = options(piece.x, piece.y, true)
     let canMove = false
     places.forEach(option => {

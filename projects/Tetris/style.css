@@ -25,7 +25,7 @@ body {
 canvas {
     background: rgb(219, 219, 219);
     margin-top: 20px;
-    width: 1000px;
+    width: 700px;
 }
 .unselectable {
     -webkit-touch-callout: none;

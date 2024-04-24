@@ -42,7 +42,7 @@ const getProjectHTML = p => {
     link = `/${p[0]}`
   }
   return `
-  <a href="${link}" class="details-container color-container">
+  <a href="${link}" class="small-link details-container color-container">
     <h2 class="experience-sub-title project-title">${p[1]}</h2>
   </a>
   `
