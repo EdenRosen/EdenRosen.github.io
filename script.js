@@ -30,7 +30,7 @@ PROJECTS = [
   ['TenTen', '1010!'],
   ['TowerDefense', 'Tower Defense'],
   ['VirusEvolution', 'Virus Evolution'],
-  ['BalloonsPop', 'Balloons Pop', true],
+  ['https://edenrosen.github.io/BalloonsPOP/', 'Balloons Pop', true],
   ['BeatMaker', 'Beat Maker'],
 ]
 
@@ -39,7 +39,7 @@ PROJECTS = [
 const getProjectHTML = p => {
   var link = `/projects/${p[0]}`
   if (p.length > 2 && p[2]) {
-    link = `/${p[0]}`
+    link = `${p[0]}`
   }
   return `
   <a href="${link}" class="small-link details-container color-container">
